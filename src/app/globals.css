@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-forest: #004f2c; /* sampled from the supplied logo */
+  --color-forest-dark: #063f21;
+  --color-sage: #eaf1e8;
+  --color-ivory: #f8f8f3;
+  --color-lime: #a8d500;
+  --color-charcoal: #1d2721;
+  --color-ribbon: #f8cb1c;
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-playfair), ui-serif, Georgia, serif;
+  --shadow-card: 0 1px 2px rgb(6 63 33 / 0.06), 0 8px 24px -6px rgb(6 63 33 / 0.14);
+  --shadow-soft: 0 1px 2px rgb(6 63 33 / 0.05), 0 6px 18px -8px rgb(6 63 33 / 0.12);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #ffffff;
+  color: var(--color-charcoal);
+  font-family: var(--font-sans);
+}
+
+/* Polished green gradient pill used for every primary action. */
+.btn-green {
+  background: linear-gradient(180deg, #0a6538 0%, #004f2c 45%, #063f21 100%);
+  box-shadow:
+    inset 0 1px 0 rgb(255 255 255 / 0.18),
+    0 4px 10px -3px rgb(6 63 33 / 0.45);
+  transition:
+    filter 0.2s ease,
+    transform 0.2s ease;
+}
+.btn-green:hover {
+  filter: brightness(1.12);
+}
+.btn-green:active {
+  transform: translateY(1px);
+}
+
+:focus-visible {
+  outline: 3px solid var(--color-lime);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  * {
+    transition-duration: 0.01ms !important;
+  }
+}
