@@ -10,6 +10,8 @@ export const SITE = {
   ],
   email: "info@keralamist.in",
   instagram: { handle: "@keralamist.in", url: "https://www.instagram.com/keralamist.in/" },
+  facebook: "https://www.facebook.com/share/1KWpjm8kzS/",
+  youtube: "https://youtube.com/@keralamistin",
 } as const;
 
 export const NAV = [

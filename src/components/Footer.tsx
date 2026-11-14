@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { NAV, SITE } from "@/lib/site";
+import SocialLinks from "./SocialLinks";
 
 export default async function Footer() {
   "use cache";
@@ -9,6 +10,9 @@ export default async function Footer() {
         <div>
           <p className="font-serif text-2xl font-bold text-white">{SITE.name}</p>
           <p className="mt-1 text-sm">{SITE.slogan}</p>
+          <div className="mt-5">
+            <SocialLinks />
+          </div>
         </div>
         <nav aria-label="Footer">
           <ul className="flex flex-wrap gap-x-6 gap-y-2 text-[15px]">
